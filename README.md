@@ -8,6 +8,9 @@
  
  ![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/d1464e96-b9f5-4cdd-958d-bffc82c320ee)
 
+![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/c390c659-c6b8-4ec6-bdc7-6543a30a4a13)
+
+
 - First things first, you need download the .mlmodel from the link blow
 
 https://drive.google.com/file/d/1CAxfhz3Ah-EsQRJ0n-AcOURiplHYRmdI/view?usp=sharing
