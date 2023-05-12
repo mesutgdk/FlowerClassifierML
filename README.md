@@ -1,6 +1,6 @@
 ## 🍁💐🌹FlowerClassifierML🌻🪴🌵
 
-# Flower classification app using coreML model, 
+# Flower classification app using coreML model
 
  🪷You can easily learn the name and description of flowers🌼 by taking a photo of them🌺.
  
