@@ -1,12 +1,10 @@
-## FlowerClassifierML
+## 🍁💐🌹FlowerClassifierML🌻🪴🌵
 
 # Flower classification app using coreML model, 
 
- You can easily learn the name and description of flowers by taking a photo of them.
- 
- ![IMG_0023](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/7000fd88-d345-4a1d-b613-b87b4538fd64)
- 
- ![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/d1464e96-b9f5-4cdd-958d-bffc82c320ee)
+ You can easily learn the name and description of flowers by taking a photo of them🌺.
+
+![IMG_0023](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/791c229f-5fec-4cfb-bc64-2b0e32edc1d4)
 
 ![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/c390c659-c6b8-4ec6-bdc7-6543a30a4a13)
 
