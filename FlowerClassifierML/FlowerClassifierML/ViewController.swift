@@ -14,6 +14,7 @@ import SwiftyJSON
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var flowerLabel: UILabel!
     
     let wikiURL = "https://en.wikipedia.org/w/api.php"
     
@@ -56,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             guard let classification = request.results?.first as? VNClassificationObservation else {
                 fatalError("couldnt classify image")
             }
-            print(request.results)
+//            print(request.results)
             
             self.navigationItem.title = classification.identifier.capitalized
             
@@ -90,13 +91,21 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         Alamofire.request(wikiURL,method: .get,parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess {
                 print("Got wiki info")
-                print(JSON(response.result.value))
+//                print(JSON(response.result.value))
                 
-                let flowerJSON : JSON = JSON(response.result.value)
+                let flowerJSON : JSON = JSON(response.result.value!)
+//                print(flowerJSON)
 
-                let pageid = flowerJSON["pageid"][0].stringValue
+                let pageids = flowerJSON["query"]["pageids"][0]
+//                print(pageids)
 
-                let flowerDescription = flowerJSON["query"]["pages"]["extract"].stringValue
+                let flowerDescription = flowerJSON["query"]["pages"]["\(pageids)"]["extract"].stringValue
+//                print(flowerDescription)
+                self.flowerLabel.text = flowerDescription
+
+                
+//                print(self.flowerLabel.text!)
+                
                 
             }
         }

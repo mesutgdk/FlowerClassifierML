@@ -17,17 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-4s-446">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-4s-446">
+                                <rect key="frame" x="16" y="103" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HU8-4s-446" secondAttribute="height" multiplier="1:1" id="5PO-Sz-eXO"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lce-GA-7Kw">
+                                <rect key="frame" x="16" y="472" width="361" height="360"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HU8-4s-446" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="24K-SD-vLl"/>
-                            <constraint firstItem="HU8-4s-446" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LQg-6r-kpG"/>
-                            <constraint firstAttribute="bottom" secondItem="HU8-4s-446" secondAttribute="bottom" id="Uf2-ta-iUT"/>
-                            <constraint firstItem="HU8-4s-446" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xdi-DH-K28"/>
+                            <constraint firstAttribute="bottom" secondItem="lce-GA-7Kw" secondAttribute="bottom" constant="20" id="0K9-cf-jsY"/>
+                            <constraint firstItem="lce-GA-7Kw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="B7b-97-vaI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HU8-4s-446" secondAttribute="trailing" constant="16" id="ERa-dH-w1f"/>
+                            <constraint firstItem="HU8-4s-446" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LLw-7U-aal"/>
+                            <constraint firstItem="HU8-4s-446" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Toi-eh-Bp9"/>
+                            <constraint firstItem="lce-GA-7Kw" firstAttribute="top" secondItem="HU8-4s-446" secondAttribute="bottom" constant="8" symbolic="YES" id="oxI-b4-Et5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lce-GA-7Kw" secondAttribute="trailing" constant="16" id="q4r-Jq-3Ed"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PTE-hX-FI5">
@@ -38,6 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="flowerLabel" destination="lce-GA-7Kw" id="Jju-3b-rWh"/>
                         <outlet property="imageView" destination="HU8-4s-446" id="UVa-Y0-mcq"/>
                     </connections>
                 </viewController>
