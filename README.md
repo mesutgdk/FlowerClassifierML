@@ -11,7 +11,7 @@
  To make it easy and not want you to install all tools such as Python2.7, i gave a link below which has a converted mlmodel
  
  
- # What i used
+ # What I Learned
  
  - UIImagePicker
  - CoreML tools (VNCoreMLRequest VNCoreMLMolel est.)
@@ -19,7 +19,7 @@
  - Made HTTP GET requests to Wikipedia using Alamofire
  - Parsed the JSON Result using SwiftyJSON
  
- # usage 
+ # Usage 
  
  Just open app and hit use Photo! It will give name of the flower and some description pulled up from the Wikipedia article.
  
