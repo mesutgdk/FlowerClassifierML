@@ -4,10 +4,9 @@
 
  You can easily learn the name and description of flowers by taking a photo of them.
  
-![IMG_0023](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/439c4680-37d6-4e21-adf1-f3a42cb4b7c5)
-
-![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/b818d03d-87de-42a2-abe0-3cc088ec4b24)
-
+ ![IMG_0023](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/7000fd88-d345-4a1d-b613-b87b4538fd64)
+ 
+ ![IMG_0024](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/d1464e96-b9f5-4cdd-958d-bffc82c320ee)
 
 - First things first, you need download the .mlmodel from the link blow
 
