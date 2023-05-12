@@ -4,6 +4,24 @@
 
  🪷You can easily learn the name and description of flowers🌼 by taking a photo of them🌺.
  
+ I took a pre-trained Caffe model-Oxford102 Flower Dataset- and converted it into a .mlmodel to use with Swift files
+ 
+ To make that, i used Apple's open-source tools in Python to convert this pre-trained model
+ 
+ To make it easy and not want you to install all tools such as Python2.7, i gave a link below which has a converted mlmodel
+ 
+ 
+ # What i used
+ 
+ - UIImagePicker
+ - CoreML tools (VNCoreMLRequest VNCoreMLMolel est.)
+ - Third Party Library (Alamofire, SwiftyJSON)
+ - Made HTTP GET requests to Wikipedia using Alamofire
+ - Parsed the JSON Result using SwiftyJSON
+ 
+ # usage 
+ 
+ Just open app and hit use Photo! It will give name of the flower and some description pulled up from the Wikipedia article.
  
 
 ![IMG_0023](https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/791c229f-5fec-4cfb-bc64-2b0e32edc1d4)
