@@ -14,6 +14,7 @@
 		63EC34B52A0D4F6800DC81C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EC34B42A0D4F6800DC81C9 /* Assets.xcassets */; };
 		63EC34B82A0D4F6800DC81C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EC34B62A0D4F6800DC81C9 /* LaunchScreen.storyboard */; };
 		63EC34C02A0D4FF000DC81C9 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 63EC34BF2A0D4FF000DC81C9 /* FlowerClassifier.mlmodel */; };
+		67A13998ADA3315382F9E43E /* Pods_FlowerClassifierML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960ECA438115E485B2573AFE /* Pods_FlowerClassifierML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		63EC34B72A0D4F6800DC81C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63EC34B92A0D4F6800DC81C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EC34BF2A0D4FF000DC81C9 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
+		6582B8633A2C688F1EF5A106 /* Pods-FlowerClassifierML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerClassifierML.debug.xcconfig"; path = "Target Support Files/Pods-FlowerClassifierML/Pods-FlowerClassifierML.debug.xcconfig"; sourceTree = "<group>"; };
+		960ECA438115E485B2573AFE /* Pods_FlowerClassifierML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerClassifierML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8D0512A980F2A9B3E6D757 /* Pods-FlowerClassifierML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerClassifierML.release.xcconfig"; path = "Target Support Files/Pods-FlowerClassifierML/Pods-FlowerClassifierML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A13998ADA3315382F9E43E /* Pods_FlowerClassifierML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CCD57DE19D4E93F8D47EBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6582B8633A2C688F1EF5A106 /* Pods-FlowerClassifierML.debug.xcconfig */,
+				FB8D0512A980F2A9B3E6D757 /* Pods-FlowerClassifierML.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		63EC349F2A0D4F6700DC81C9 = {
 			isa = PBXGroup;
 			children = (
 				63EC34AA2A0D4F6700DC81C9 /* FlowerClassifierML */,
 				63EC34A92A0D4F6700DC81C9 /* Products */,
+				04CCD57DE19D4E93F8D47EBF /* Pods */,
+				90445403CA1214B6C2FDF58D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +86,14 @@
 			path = FlowerClassifierML;
 			sourceTree = "<group>";
 		};
+		90445403CA1214B6C2FDF58D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				960ECA438115E485B2573AFE /* Pods_FlowerClassifierML.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63EC34BC2A0D4F6800DC81C9 /* Build configuration list for PBXNativeTarget "FlowerClassifierML" */;
 			buildPhases = (
+				8E0BB43E2123B53D9AEC5C0C /* [CP] Check Pods Manifest.lock */,
 				63EC34A42A0D4F6700DC81C9 /* Sources */,
 				63EC34A52A0D4F6700DC81C9 /* Frameworks */,
 				63EC34A62A0D4F6700DC81C9 /* Resources */,
+				E2646C3F7B70CC9F7209B261 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E0BB43E2123B53D9AEC5C0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowerClassifierML-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2646C3F7B70CC9F7209B261 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerClassifierML/Pods-FlowerClassifierML-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerClassifierML/Pods-FlowerClassifierML-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerClassifierML/Pods-FlowerClassifierML-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63EC34A42A0D4F6700DC81C9 /* Sources */ = {
@@ -286,6 +354,7 @@
 		};
 		63EC34BD2A0D4F6800DC81C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6582B8633A2C688F1EF5A106 /* Pods-FlowerClassifierML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,7 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +384,7 @@
 		};
 		63EC34BE2A0D4F6800DC81C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8D0512A980F2A9B3E6D757 /* Pods-FlowerClassifierML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,7 +398,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

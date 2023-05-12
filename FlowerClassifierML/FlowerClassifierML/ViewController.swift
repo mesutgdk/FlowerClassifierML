@@ -8,11 +8,15 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-
+    
+    let wikiURL = "https://en.wikipedia.org/w/api.php"
+    
     let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -49,9 +53,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         
         let request = VNCoreMLRequest(model: model) { (request,error) in
             
-            let classification = request.results?.first as? VNClassificationObservation
+            guard let classification = request.results?.first as? VNClassificationObservation else {
+                fatalError("couldnt classify image")
+            }
+            print(request.results)
             
-            self.navigationItem.title = classification?.identifier.capitalized
+            self.navigationItem.title = classification.identifier.capitalized
+            
+            self.requestInfo(flowerName: classification.identifier)
             
         }
         
@@ -64,6 +73,35 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
 
+    func requestInfo(flowerName:String){
+        
+        let parameters: [String:String] = [
+            
+            "format":"json",
+            "action":"query",
+            "prop":"extracts",
+            "exintro":"",
+            "explaintext":"",
+            "titles": flowerName,
+            "indexpageids":"",
+            "redirects":"1"
+        ]
+        
+        Alamofire.request(wikiURL,method: .get,parameters: parameters).responseJSON { (response) in
+            if response.result.isSuccess {
+                print("Got wiki info")
+                print(JSON(response.result.value))
+                
+                let flowerJSON : JSON = JSON(response.result.value)
+
+                let pageid = flowerJSON["pageid"][0].stringValue
+
+                let flowerDescription = flowerJSON["query"]["pages"]["extract"].stringValue
+                
+            }
+        }
+    }
+    
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true)
         
