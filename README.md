@@ -42,7 +42,7 @@ https://drive.google.com/file/d/1CAxfhz3Ah-EsQRJ0n-AcOURiplHYRmdI/view?usp=shari
 
 <img width="583" alt="Ekran Resmi 2023-05-12 17 49 38" src="https://github.com/mesutgdk/FlowerClassifierML/assets/112901255/42a44dcb-03b9-4f99-a42e-44f182a39c29">
 
-- 🌴if the pod file is inclueded and not downloaded, write "pod install" into terminal and press enter,
+- 🌴if the pod file is not inclueded and not downloaded, write "pod install" into terminal and press enter,
 
 - 🎍After the installation is complete, open the project from "FlowerClassifierML.xcworkspace" file you downloaded, not ".xcodeproj" file.
 
